@@ -1125,7 +1125,7 @@ hr_run() {
     case $role in
         user)
             cd $HR_LAUNCHPAD_DIR
-            ./main.sh --autoname --nogui $@
+            ./main.sh --autoname  $@
             ;;
         developer)
             info "Starting"
@@ -1155,7 +1155,7 @@ hr_run() {
             [[ -f /tmp/hr_pip_freeze3 ]] && rm /tmp/hr_pip_freeze3
             [[ -f /tmp/hr_deb_freeze ]] && rm /tmp/hr_deb_freeze
             cd $HR_LAUNCHPAD_DIR
-            ./main_dev.sh --autoname --nogui $@
+            ./main_dev.sh --autoname $@
             ;;
         *)
             error $role
